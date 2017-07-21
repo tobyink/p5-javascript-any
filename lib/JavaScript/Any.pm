@@ -21,8 +21,8 @@ sub _generate_jseval {
 
 my $IMPLEMENTATION;
 my @IMPLEMENTATIONS = qw(
-	JavaScript::Any::Context::Duktape
 	JavaScript::Any::Context::V8
+	JavaScript::Any::Context::Duktape
 	JavaScript::Any::Context::JE
 );
 
@@ -78,12 +78,57 @@ Or:
 
 =head1 DESCRIPTION
 
+This module is a thin wrapper around L<JavaScript::V8>,
+L<JavaScript::Duktape>, and L<JE>, allowing you to evaluate strings of
+Javascript code from Perl.
+
+=head2 Status
+
+This is a very early alpha version. The API still needs documenting and
+cleaning up a lot.
+
+In particular, the API for defining custom Javascript functions exposes
+differences between the alternative Javascript implementations. Future
+versions of JavaScript::Any will smooth some of these out.
+
+=head2 Functional Interface
+
+This module can export one function. It is not exported by default.
+
+=over
+
+=item C<< jseval($str) >>
+
+Evaluates the string of Javascript in a fresh context and returns
+the result.
+
+=back
+
+=head2 Object-Oriented Interface
+
+For more advanced features, use the object-oriented interface.
+
+=over
+
+=item C<< JavaScript::Any->new_context(%opts) >>
+
+Factory method returning an object which implements the
+L<JavaScript::Any::Context> API.
+
+=back
+
 =head1 BUGS
 
 Please report any bugs to
 L<http://rt.cpan.org/Dist/Display.html?Queue=JavaScript-Any>.
 
 =head1 SEE ALSO
+
+L<JavaScript::Any::Context>.
+
+L<JavaScript::V8>,
+L<JavaScript::Duktape>,
+L<JE>.
 
 =head1 AUTHOR
 
@@ -95,7 +140,6 @@ This software is copyright (c) 2017 by Toby Inkster.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
-
 
 =head1 DISCLAIMER OF WARRANTIES
 
