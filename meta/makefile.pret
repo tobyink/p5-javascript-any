@@ -3,6 +3,12 @@
 @prefix : <http://ontologi.es/doap-deps#>.
 
 `JavaScript-Any`
+	:runtime-requirement    [ :on "perl 5.008003"^^:CpanId ];
+	:runtime-requirement    [ :on "Exporter::Shiny 1.000000"^^:CpanId ];
+	:runtime-requirement    [ :on "namespace::autoclean"^^:CpanId ];
+	:runtime-requirement    [ :on "Class::Tiny"^^:CpanId ];
+	:runtime-requirement    [ :on "Role::Tiny"^^:CpanId ];
+	:runtime-requirement    [ :on "Ref::Util"^^:CpanId ];
 	:test-requirement       [ :on "Test::More 0.96"^^:CpanId ];
 	:develop-recommendation [ :on "Dist::Inkt 0.001"^^:CpanId ];
 	.
