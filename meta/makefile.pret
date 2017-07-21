@@ -9,6 +9,7 @@
 	:runtime-requirement    [ :on "Class::Tiny"^^:CpanId ];
 	:runtime-requirement    [ :on "Role::Tiny"^^:CpanId ];
 	:runtime-requirement    [ :on "Ref::Util"^^:CpanId ];
+	:runtime-requirement    [ :on "JSON::PP"^^:CpanId ];
 	:test-requirement       [ :on "Test::More 0.96"^^:CpanId ];
 	:develop-recommendation [ :on "Dist::Inkt 0.001"^^:CpanId ];
 	.

@@ -5,7 +5,7 @@ use warnings;
 package JavaScript::Any::Context::Duktape;
 
 our $AUTHORITY = 'cpan:TOBYINK';
-our $VERSION   = '0.001';
+our $VERSION   = '0.002';
 
 use namespace::autoclean;
 use Class::Tiny qw( _engine );

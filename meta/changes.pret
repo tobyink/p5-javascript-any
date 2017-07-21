@@ -4,3 +4,9 @@
 	issued  2017-07-19;
 	label   "Initial release".
 
+`JavaScript-Any 0.002 cpan:TOBYINK`
+	issued  2017-07-19;
+	changeset [
+		item "Add JSON::PP as a prereq."^^dcs:Packaging;
+	].
+
